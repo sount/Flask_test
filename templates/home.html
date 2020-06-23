@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-10">FUP-Tool</legend>
+                <!-- Orderingparty -->
+                <h5>Ordering Party</h5>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                    {{ form.ibanorder.label(class="form-control-label") }}
+                    {{ form.ibanorder(class="form-control form-control-lg") }}
+                    </div>
+                <div class="form-group col-md-6">
+                    {{ form.bicorder.label(class="form-control-label") }}
+                    {{ form.bicorder(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="form-group col-md-6">
+                    {{ form.banknameorder.label(class="form-control-label") }}
+                    {{ form.banknameorder(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.creditor.label(class="form-control-label") }}
+                    {{ form.creditor(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <div class="row">
+                 <div class="form-group col-md-6">
+                    {{ form.nameorder.label(class="form-control-label") }}
+                    {{ form.nameorder(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.adress1order.label(class="form-control-label") }}
+                    {{ form.adress1order(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <div class="row">
+                 <div class="form-group col-md-6">
+                    {{ form.adress2order.label(class="form-control-label") }}
+                    {{ form.adress2order(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.countryorder.label(class="form-control-label") }}
+                    {{ form.countryorder(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <!-- Counter Party -->
+                <h5>Counter Party</h5>
+                <div class="row">
+                 <div class="form-group col-md-6">
+                    {{ form.ibancount.label(class="form-control-label") }}
+                    {{ form.ibancount(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group col-md-6">
+                    {{ form.biccount.label(class="form-control-label") }}
+                    {{ form.biccount(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <div class="row">
+                <div class="form-group col-md-6">
+                    {{ form.banknamecount.label(class="form-control-label") }}
+                    {{ form.banknamecount(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.namecount.label(class="form-control-label") }}
+                    {{ form.namecount(class="form-control form-control-lg") }}
+                </div>
+                    </div>
+                <div class="row">
+                <div class="form-group col-md-6">
+                    {{ form.adress1count.label(class="form-control-label") }}
+                    {{ form.adress1count(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.adress2count.label(class="form-control-label") }}
+                    {{ form.adress2count(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                 <div class="form-group">
+                    {{ form.countrycount.label(class="form-control-label") }}
+                    {{ form.countrycount(class="form-control form-control-lg") }}
+                </div>
+                <!-- Test Data Parameters -->
+                <h5>Test Data Parameters</h5>
+                <div class="row">
+                 <div class="form-group col-md-6">
+                    {{ form.inputchannel.label(class="form-control-label") }}
+                    {{ form.inputchannel(class="form-control form-control-lg") }}
+                </div>
+                  <div class="form-group col-md-6">
+                    {{ form.messagetype.label(class="form-control-label") }}
+                    {{ form.messagetype(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6 ">
+                    {{ form.transactiontype.label(class="form-control-label") }}
+                    {{ form.transactiontype(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.numberoftransactions.label(class="form-control-label") }}
+                    {{ form.numberoftransactions(class="form-control form-control-lg") }}
+                </div>
+                </div>
+                <!-- Settlement Amount -->
+                <h5>Amount</h5>
+                 <div class="form-group">
+                    {{ form.settlementamount.label(class="form-control-label") }}
+                    {{ form.settlementamount(class="form-control form-control-lg") }}
+                </div>
+                <!-- Details -->
+                <h5> Details </h5>
+                <div class="form-group">
+                    {{ form.detailsofpayment.label(class="form-control-label") }}
+                    {{ form.detailsofpayment(class="form-control form-control-lg") }}
+                </div>
+                <div class="form-group">
+                    {{ form.endtoendid.label(class="form-control-label") }}
+                    {{ form.endtoendid(class="form-control form-control-lg") }}
+                </div>
+                 <div class="form-group col-md-6">
+                    {{ form.localonly.label(class="form-control-label") }}
+                    {{ form.localonly(class="form-control form-control-lg") }}
+                </div>
+                <!-- Date -->
+                <h5>Dates</h5>
+                <div class="form-group">
+                    {{ form.settlementdate.label(class="form-control-label") }}
+                    {{ form.settlementdate(class="form-control form-control-lg") }}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
